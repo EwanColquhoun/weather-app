@@ -60,7 +60,6 @@ function showMetar(weather) {
     // console.log(weather)
     let content = document.getElementById('wxResults');
     for (let metar of wx) {
-        console.log(wx)
         content.innerHTML += `<span class='block'>${metar}</span>`;
     };
     
