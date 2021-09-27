@@ -21,7 +21,7 @@
             <div class="col-auto">
               <input type="text" class="form-control" id="icao" name="icao" aria-describedby="passwordHelpInline">
             </div>
-            <div class="col-auto">
+            <div id="helperText" class="col-auto">
               <span id="passwordHelpInline" class="form-text">
                 Entered in ICAO eg: EGPH,EGPF
               </span>
@@ -37,6 +37,12 @@
         <div class="results-container" id="wxResults"></div>
       </div>
     </div>
+    <div class="container my-4 hidden" id="taf">
+        <h3>TAFs:</h3>
+        <div class="row">
+          <div class="results-container" id="tafResults"></div>
+        </div>
+      </div>
     
     
 

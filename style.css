@@ -1,5 +1,8 @@
 body {
     background-color: skyblue;
+    background-image: url('/assets/images/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .results-container {
@@ -17,4 +20,12 @@ body {
 
 .hidden {
     display: none;
+}
+
+.form-text {
+    color: #212529;
+}
+
+#helperText {
+    margin: 10px 0px;
 }

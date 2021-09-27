@@ -31,15 +31,15 @@ function getTaf() {
   let icao = document.getElementById('icao').value;
   let wxAddress = 'https://api.checkwx.com/taf/'+`${icao}`;
   var xhttp = new XMLHttpRequest();
-  let wxDiv = document.getElementById('wx')
-  wxDiv.classList.remove('hidden');
-  wxDiv.classList.add('block');
+  let tafDiv = document.getElementById('taf')
+  tafDiv.classList.remove('hidden');
+  tafDiv.classList.add('block');
 
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
           let fc = JSON.parse(this.responseText);
           let taf = fc.data
-          showMetar(taf)
+          showTaf(taf)
     }
   };
 
@@ -50,15 +50,27 @@ function getTaf() {
 
 function clearwx() {
   let content = document.getElementById('wxResults');
+  let tafContent = document.getElementById('tafResults')
+  tafContent.innerHTML = ''
   content.innerHTML = ''
 }
 
 function showMetar(weather) {
     let wx = weather
-    console.log(weather)
+    // console.log(weather)
     let content = document.getElementById('wxResults');
     for (let metar of wx) {
-       content.innerHTML += `<span class='block'>${metar}</span>`;
+        console.log(wx)
+        content.innerHTML += `<span class='block'>${metar}</span>`;
     };
     
+};
+
+function showTaf(weather) {
+  let wx = weather
+  // console.log(weather)
+  let content = document.getElementById('tafResults');
+  for (let taf of wx) {
+     content.innerHTML += `<span class='block'>${taf}</span>`;
+  };
 };
