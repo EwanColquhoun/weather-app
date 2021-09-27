@@ -1,4 +1,4 @@
-import { API_KEY } from '../creds.js'
+import { API_KEY } from './creds.js'
 
 document.getElementById('submit-wx').addEventListener('click', (e,) => {
 clearwx()
