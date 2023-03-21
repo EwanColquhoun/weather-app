@@ -70,6 +70,6 @@ function showTaf(weather) {
   // console.log(weather)
   let content = document.getElementById('tafResults');
   for (let taf of wx) {
-     content.innerHTML += `<span class='block'>${taf}</span>`;
+     content.innerHTML += `<span class='block'>${taf}</span><br>`;
   };
 };
